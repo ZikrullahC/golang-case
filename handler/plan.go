@@ -100,10 +100,10 @@ func HaftalikPlanlar(c echo.Context) error {
 		return c.JSON(http.StatusBadRequest, echo.Map{"error": "Baslangic gunu gerekli"})
 	}
 
-	dateFormat := "02-01-2006"
+	dateFormat := "02-01-2006 15:04:05"
 	baslangicGunu, err := time.Parse(dateFormat, baslangicGunuStr)
 	if err != nil {
-		return c.JSON(http.StatusBadRequest, echo.Map{"error": "Gecersiz tarih formati. Dogru format: dd-MM-yyyy"})
+		return c.JSON(http.StatusBadRequest, echo.Map{"error": "Gecersiz tarih formati. Dogru format: dd-MM-yyyy HH:mm"})
 	}
 
 	bitisGunu := baslangicGunu.AddDate(0, 0, 7)
