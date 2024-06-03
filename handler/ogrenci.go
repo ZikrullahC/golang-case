@@ -58,7 +58,7 @@ func OgrenciSil(c echo.Context) error {
 		return c.JSON(http.StatusNotFound, echo.Map{"error": "Ogrenci bulunamadi"})
 	}
 
-	return c.NoContent(http.StatusNoContent)
+	return c.JSON(http.StatusNoContent, echo.Map{"mesaj": "Ogrenci basarili bir sekilde silindi"})
 }
 
 func TumOgrenciBilgileriAl(c echo.Context) error {
