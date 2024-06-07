@@ -1,4 +1,4 @@
-# Vatan Soft Go Staj Case
+# Go Case Öğrenci Yapılacaklar Listesi
 
 Bu proje, Go dilinde yazılmış bir web uygulamasıdır. Öğrenci ve plan bilgilerini yönetmek için bir RESTful API sağlar. Projede, Echo web framework'ü ve GORM ORM kullanılmıştır.
 
